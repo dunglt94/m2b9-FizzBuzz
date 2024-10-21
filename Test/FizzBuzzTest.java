@@ -15,4 +15,15 @@ public class FizzBuzzTest {
         assertEquals(result, actual);
     }
 
+    @Test
+    @DisplayName("So chia het cho 5 thi chuoi la Buzz")
+    public void TestGetFizzBuzzCaseDividedBy5() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int number = 5;
+
+        String result = "Buzz";
+        String actual = fizzBuzz.getFizzBuzz(number);
+        assertEquals(result, actual);
+    }
+
 }
