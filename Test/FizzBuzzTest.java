@@ -85,4 +85,13 @@ public class FizzBuzzTest {
         assertEquals(result, actual);
     }
 
+    @Test
+    @DisplayName("cho ket qua la dang chu cua so < 10")
+    public void TestReadNumberAsWordCaseNumberLessThan() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int number = 8;
+
+        String result = "tam";
+        String actual = fizzBuzz.readNumberAsWord(number);
+    }
 }

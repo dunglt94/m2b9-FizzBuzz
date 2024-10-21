@@ -7,8 +7,6 @@ public class FizzBuzz {
         String result = "";
         boolean isDividedBy3 = number % 3 == 0;
         boolean isDividedBy5 = number % 5 == 0;
-
-        String numberString =  String.valueOf(number);
         boolean contains3 = String.valueOf(number).contains("3");
         boolean contains5 = String.valueOf(number).contains("5");
 
@@ -19,16 +17,24 @@ public class FizzBuzz {
         } else if (isDividedBy5 || contains5) {
             result = "Buzz";
         } else {
-            String firstNumber = getWordFromNumber(numberString.charAt(0));
-            String secondNumber = getWordFromNumber(numberString.charAt(1));
-            if (number > 0 && number < 10) {
-                result = firstNumber;
-            } else {
-                if (number < 20) {
-                    result = FIRST_DIGIT_OF_TWO_DIGIT_NUMBER_LESS_THAN_10 + CONCAT_STRING + secondNumber;
-                } else if (number < 100) {
-                    result = firstNumber + CONCAT_STRING + secondNumber;
-                }
+            result = readNumberAsWord(number);
+        }
+        return result;
+    }
+
+    public String readNumberAsWord(int number) {
+        String result = "";
+        String numberString =  String.valueOf(number);
+        String firstDigit = getWordFromNumber(numberString.charAt(0));
+
+        if (number > 0 && number < 10) {
+            result =  firstDigit;
+        } else {
+            String secondDigit = getWordFromNumber(numberString.charAt(1));
+            if (number < 20) {
+                result =  FIRST_DIGIT_OF_TWO_DIGIT_NUMBER_LESS_THAN_10 + CONCAT_STRING + secondDigit;
+            } else if (number < 100) {
+                result = firstDigit + CONCAT_STRING + secondDigit;
             }
         }
         return result;
