@@ -59,4 +59,16 @@ public class FizzBuzzTest {
         assertEquals(result, actual);
     }
 
+    @Test
+    @DisplayName("doc so duoi dang chu voi so < 10")
+    public void TestGetWordFromNumberCaseNumberLessThan10() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int number = 7;
+        String numberString = String.valueOf(number);
+
+        String result = "bay";
+        String actual = fizzBuzz.getWordFromNumber(numberString.charAt(0));
+        assertEquals(result, actual);
+    }
+
 }
