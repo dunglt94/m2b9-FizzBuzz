@@ -8,11 +8,11 @@ public class FizzBuzz {
         boolean contains3 = String.valueOf(number).contains("3");
         boolean contains5 = String.valueOf(number).contains("5");
         if (isDividedBy3 && isDividedBy5 || contains3 && contains5) {
-                result = "FizzBuzz";
+            result = "FizzBuzz";
         } else if (isDividedBy3 || contains3) {
-                    result = "Fizz";
-        } else if (isDividedBy5 || String.valueOf(number).contains("5")) {
-                result = "Buzz";
+            result = "Fizz";
+        } else if (isDividedBy5 || contains5) {
+            result = "Buzz";
         }
 
 

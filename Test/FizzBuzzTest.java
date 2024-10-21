@@ -48,4 +48,15 @@ public class FizzBuzzTest {
         assertEquals(result, actual);
     }
 
+    @Test
+    @DisplayName("So nhap vao co chua so 5 the ket qua la Buzz")
+    public void TestGetFizzBuzzCaseNumberContain5() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int number = 52;
+
+        String result = "Buzz";
+        String actual = fizzBuzz.getFizzBuzz(number);
+        assertEquals(result, actual);
+    }
+
 }
