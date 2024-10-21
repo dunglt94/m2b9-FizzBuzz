@@ -60,14 +60,28 @@ public class FizzBuzzTest {
     }
 
     @Test
-    @DisplayName("doc so duoi dang chu voi so < 10")
-    public void TestGetWordFromNumberCaseNumberLessThan10() {
+    @DisplayName("doc so duoi dang chu")
+    public void TestGetWordFromNumber() {
         FizzBuzz fizzBuzz = new FizzBuzz();
         int number = 7;
         String numberString = String.valueOf(number);
+        char fistDigit = numberString.charAt(0);
 
         String result = "bay";
-        String actual = fizzBuzz.getWordFromNumber(numberString.charAt(0));
+        String actual = fizzBuzz.getWordFromNumber(fistDigit);
+        assertEquals(result, actual);
+    }
+
+    @Test
+    @DisplayName("doc so duoi dang chu voi so co hai chu so")
+    public void TestGetWordFromNumberCaseNumberHasTwoDigit() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int number = 17;
+        String numberString = String.valueOf(number);
+        char secondDigit = numberString.charAt(1);
+
+        String result = "bay";
+        String actual = fizzBuzz.getWordFromNumber(secondDigit);
         assertEquals(result, actual);
     }
 
