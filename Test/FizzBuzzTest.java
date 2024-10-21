@@ -93,5 +93,19 @@ public class FizzBuzzTest {
 
         String result = "tam";
         String actual = fizzBuzz.readNumberAsWord(number);
+        assertEquals(result, actual);
     }
+
+    @Test
+    @DisplayName("cho ket qua la dang chu cua so > 10 va < 20")
+    public void TestReadNumberAsWordCaseFrom10To19() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int number = 16;
+
+        String result = "muoi sau";
+        String actual = fizzBuzz.readNumberAsWord(number);
+        assertEquals(result, actual);
+    }
+
+
 }
