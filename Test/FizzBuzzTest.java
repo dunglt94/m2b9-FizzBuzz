@@ -26,4 +26,15 @@ public class FizzBuzzTest {
         assertEquals(result, actual);
     }
 
+    @Test
+    @DisplayName("So chia het cho 3 va 5 thi chuoi la FizzBuzz")
+    public void TestGetFizzBuzzCaseDividedBy3And5() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int number = 15;
+
+        String result = "FizzBuzz";
+        String actual = fizzBuzz.getFizzBuzz(number);
+        assertEquals(result, actual);
+    }
+
 }
