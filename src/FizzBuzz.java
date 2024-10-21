@@ -4,7 +4,7 @@ public class FizzBuzz {
     public static final String FIRST_DIGIT_OF_TWO_DIGIT_NUMBER_LESS_THAN_10 = "muoi";
 
     public String getFizzBuzz(int number) {
-        String result = "";
+        String result;
         boolean isDividedBy3 = number % 3 == 0;
         boolean isDividedBy5 = number % 5 == 0;
         boolean contains3 = String.valueOf(number).contains("3");
@@ -27,14 +27,21 @@ public class FizzBuzz {
         String numberString =  String.valueOf(number);
         String firstDigit = getWordFromNumber(numberString.charAt(0));
 
-        if (number > 0 && number < 10) {
+        boolean numberFrom1To9 = number > 0 && number < 10;
+        boolean numberFrom10To19 = number < 20;
+        boolean numberFrom20To99 = number < 100;
+
+        if (numberFrom1To9) {
             result =  firstDigit;
         } else {
             String secondDigit = getWordFromNumber(numberString.charAt(1));
-            if (number < 20) {
+
+            if (numberFrom10To19) {
                 result =  FIRST_DIGIT_OF_TWO_DIGIT_NUMBER_LESS_THAN_10 + CONCAT_STRING + secondDigit;
-            } else if (number < 100) {
-                result = firstDigit + CONCAT_STRING + secondDigit;
+            } else {
+                if (numberFrom20To99) {
+                    result = firstDigit + CONCAT_STRING + secondDigit;
+                }
             }
         }
         return result;

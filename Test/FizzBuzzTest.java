@@ -107,5 +107,15 @@ public class FizzBuzzTest {
         assertEquals(result, actual);
     }
 
+    @Test
+    @DisplayName("cho ket qua la dang chu cua so > 20 va < 100")
+    public void TestReadNumberAsWordCaseFrom20To99() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int number = 59;
+
+        String result = "nam chin";
+        String actual = fizzBuzz.readNumberAsWord(number);
+        assertEquals(result, actual);
+    }
 
 }
